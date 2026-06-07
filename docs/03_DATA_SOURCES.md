@@ -41,6 +41,49 @@ Cada fonte receberá avaliações para:
 
 # Classificação das Fontes
 
+# Priorização Estratégica
+
+As fontes serão classificadas em três níveis de prioridade.
+
+## Tier 1 - Core Dataset
+
+Fontes sem as quais o Atlas não consegue gerar valor relevante.
+
+Exemplos:
+
+- Portais imobiliários
+- Dados de aluguel
+- Airbnb
+- FipeZap
+- Leilões
+
+---
+
+## Tier 2 - Contexto de Mercado
+
+Fontes utilizadas para contextualizar e enriquecer análises.
+
+Exemplos:
+
+- Google Trends
+- Google Places
+- Booking
+- IBGE
+
+---
+
+## Tier 3 - Diferenciais
+
+Fontes capazes de aumentar o poder preditivo dos modelos, mas não essenciais para a validação inicial da tese.
+
+Exemplos:
+
+- Dados de voos
+- Mobilidade
+- Redes sociais
+- Dados climáticos
+- Eventos
+
 ## Categoria 1 - Demanda e Interesse
 
 Objetivo:
@@ -319,6 +362,46 @@ Mapeamento
 
 ## Categoria 5 - Infraestrutura
 
+## Categoria 6 - Demografia e Migração
+
+Objetivo:
+
+Identificar regiões em crescimento ou declínio estrutural.
+
+---
+
+### DS-009
+
+Fonte:
+IBGE / Eurostat / ISTAT
+
+Tipo:
+Demografia
+
+Dados:
+
+* população histórica
+* migração líquida
+* renda
+* idade média
+* formação de domicílios
+
+Hipóteses:
+
+* HYP-001
+* HYP-002
+
+Valor Estratégico:
+
+5/5
+
+Prioridade:
+
+Alta
+
+Status:
+
+Mapeamento
 Objetivo:
 
 Identificar investimentos que possam antecipar valorização.
@@ -353,6 +436,45 @@ Status:
 Mapeamento
 
 ---
+## Categoria 7 - Distress e Pressão Vendedora
+
+Objetivo:
+
+Identificar ativos com potencial de aquisição abaixo do valor de mercado.
+
+---
+
+### DS-010
+
+Fonte:
+Leilões Caixa, Mega Leilões, Zuk e agregadores
+
+Tipo:
+Distress
+
+Dados:
+
+* valor de avaliação
+* valor de venda
+* desconto
+* histórico de leilões
+* localização
+
+Hipóteses:
+
+* HYP-003
+
+Valor Estratégico:
+
+5/5
+
+Prioridade:
+
+Alta
+
+Status:
+
+Mapeamento
 
 # Backlog de Fontes
 
@@ -384,3 +506,26 @@ Transformar cada fonte catalogada em uma ficha técnica contendo:
 * Estrutura dos dados
 * Frequência de atualização
 * Complexidade de integração
+
+* # Aplicação das Fontes no Produto
+
+As fontes deverão ser classificadas também de acordo com a funcionalidade que suportam dentro do Atlas.
+
+| Fonte | Discovery | Analysis |
+|---------|---------|---------|
+| Google Trends | Sim | Não |
+| Google Places | Sim | Não |
+| Airbnb | Sim | Parcial |
+| Booking | Sim | Parcial |
+| FipeZap | Não | Sim |
+| Portais Imobiliários | Sim | Sim |
+| Leilões | Sim | Sim |
+| IBGE | Sim | Parcial |
+
+Onde:
+
+Discovery:
+Identificação de oportunidades e regiões promissoras.
+
+Analysis:
+Avaliação detalhada de um ativo específico.
